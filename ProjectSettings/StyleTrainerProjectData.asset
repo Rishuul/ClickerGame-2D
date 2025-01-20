@@ -1,0 +1,767 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 53
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07c9b2c97f84356bb2bfac29363e611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StyleTrainerData:
+    rid: 1544718527035343105
+  m_DefaultStyleData:
+    rid: 1544718527035343106
+  m_DefaultStyleVersion: 2023111600
+  m_DefaultStyles:
+  - rid: 1544718527035343177
+  m_AssetPath: 
+  m_PreviousProjectIDs: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1544718527035343105
+      type: {class: StyleTrainerData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: d04f57f8-4eef-4c5d-8789-ace65d003936
+        m_State: 1
+        m_Disposing: 0
+        m_Styles:
+        - rid: 1544718527035343179
+        m_Version: 202231001
+    - rid: 1544718527035343106
+      type: {class: StyleTrainerData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 11000000-0000-0000-0000-000000000011
+        m_State: 1
+        m_Disposing: 0
+        m_Styles:
+        - rid: 1544718527035343181
+        m_Version: 202231001
+    - rid: 1544718527035343177
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 00000000-0000-0000-0000-000000000000
+        m_State: 1
+        m_Disposing: 0
+        m_IsFallback: 1
+        m_Thumbnail:
+          rid: -2
+        m_Visible: 0
+        selectedCheckPointGUID: 00000000-0000-0000-0000-000000000000
+        m_FavoriteCheckPointGUID: active
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: 00000000-0000-0000-0000-000000000000
+        m_TrainingSteps: 2000
+        m_CheckPoints:
+        - m_Guid: 00000000-0000-0000-0000-000000000000
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: 00000000-0000-0000-0000-000000000000
+          m_Name: Default
+          m_Description: Default style.
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 
+            m_State: 0
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: 
+          m_ValidationImagesData: []
+          m_FavoriteSampleOutputDataGuid: 
+          m_TrainingSteps: 2000
+        m_SampleOutputPrompts: []
+        m_TrainingSetData: []
+        m_Name: Default
+        m_Description: Default style.
+    - rid: 1544718527035343179
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 849b1dec-ad31-4e4e-8d43-235d108be8cc
+        m_State: 1
+        m_Disposing: 0
+        m_IsFallback: 0
+        m_Thumbnail:
+          rid: 1544718527035343180
+        m_Visible: 1
+        selectedCheckPointGUID: e9272784-b697-48cd-8cff-c1b4fd864ff9
+        m_FavoriteCheckPointGUID: active
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+        m_TrainingSteps: 2000
+        m_CheckPoints:
+        - m_Guid: 0a2bff6e-dfdc-44a4-a1b4-dac72faeb737
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_Name: Pixel Art
+          m_Description: 2d pixel art clicker game
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9317d776-223d-414d-a474-77fe5c68461a
+            m_State: 5
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_ValidationImagesData:
+          - m_Guid: bc28f726-b30b-406c-bef9-575fd1fbabc4
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: bc28f726-b30b-406c-bef9-575fd1fbabc4
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: restaurant
+          - m_Guid: 3bbf3511-d75f-497b-84eb-051cc346fc21
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 3bbf3511-d75f-497b-84eb-051cc346fc21
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: hotel
+          - m_Guid: d40f3e37-a9d5-4a52-82c1-b87f401ae95c
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: d40f3e37-a9d5-4a52-82c1-b87f401ae95c
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: post office
+          m_FavoriteSampleOutputDataGuid: 
+          m_TrainingSteps: 200
+        - m_Guid: 1bc99d53-43e1-47cc-87b8-be90618a725d
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_Name: Pixel Art
+          m_Description: 2d pixel art clicker game
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9317d776-223d-414d-a474-77fe5c68461a
+            m_State: 5
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_ValidationImagesData:
+          - m_Guid: 5acb2d6a-4a83-4a63-afba-2f9ebac3ce93
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 5acb2d6a-4a83-4a63-afba-2f9ebac3ce93
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: restaurant
+          - m_Guid: 2dbfcead-7521-4415-aa4f-638b6f128fa2
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 2dbfcead-7521-4415-aa4f-638b6f128fa2
+              m_State: 2
+              m_Disposing: 0
+            m_Prompt: hotel
+          - m_Guid: 420f757a-ea08-4d94-bdf9-bc5960e04b72
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 420f757a-ea08-4d94-bdf9-bc5960e04b72
+              m_State: 2
+              m_Disposing: 0
+            m_Prompt: post office
+          m_FavoriteSampleOutputDataGuid: 
+          m_TrainingSteps: 400
+        - m_Guid: d846d880-f1c1-4787-9046-6e8848857e93
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_Name: Pixel Art
+          m_Description: 2d pixel art clicker game
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9317d776-223d-414d-a474-77fe5c68461a
+            m_State: 5
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_ValidationImagesData:
+          - m_Guid: c37b6f54-2797-4702-89db-d8d5a9a0ac8f
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: c37b6f54-2797-4702-89db-d8d5a9a0ac8f
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: restaurant
+          - m_Guid: 19a1974e-08f5-42ae-8531-5ec6bcad7352
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 19a1974e-08f5-42ae-8531-5ec6bcad7352
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: hotel
+          - m_Guid: 0e10dd99-d27b-46a7-bfc3-1f9dcac4b298
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 0e10dd99-d27b-46a7-bfc3-1f9dcac4b298
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: post office
+          m_FavoriteSampleOutputDataGuid: 
+          m_TrainingSteps: 600
+        - m_Guid: bb64bbe7-3ac6-49b0-9ee8-abf4016c805c
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_Name: Pixel Art
+          m_Description: 2d pixel art clicker game
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9317d776-223d-414d-a474-77fe5c68461a
+            m_State: 5
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_ValidationImagesData:
+          - m_Guid: ba417a15-73fb-4938-953f-63dfe01e402e
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: ba417a15-73fb-4938-953f-63dfe01e402e
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: restaurant
+          - m_Guid: 88c5a0b8-947a-43b3-9bf3-f35bbd5d3c62
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 88c5a0b8-947a-43b3-9bf3-f35bbd5d3c62
+              m_State: 2
+              m_Disposing: 0
+            m_Prompt: hotel
+          - m_Guid: 187d67de-e682-4388-8fcb-71b154454bf3
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 187d67de-e682-4388-8fcb-71b154454bf3
+              m_State: 2
+              m_Disposing: 0
+            m_Prompt: post office
+          m_FavoriteSampleOutputDataGuid: 
+          m_TrainingSteps: 800
+        - m_Guid: 7825cd60-ebe4-49e0-a671-5da3f16748c7
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_Name: Pixel Art
+          m_Description: 2d pixel art clicker game
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9317d776-223d-414d-a474-77fe5c68461a
+            m_State: 5
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_ValidationImagesData:
+          - m_Guid: 6c4685f9-17d3-4101-9bc1-05762e37b8f3
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 6c4685f9-17d3-4101-9bc1-05762e37b8f3
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: restaurant
+          - m_Guid: d63278f3-2130-4f5e-b66e-eb5f268281dd
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: d63278f3-2130-4f5e-b66e-eb5f268281dd
+              m_State: 2
+              m_Disposing: 0
+            m_Prompt: hotel
+          - m_Guid: 444618cc-417b-49ac-8962-bd1e2899d562
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 444618cc-417b-49ac-8962-bd1e2899d562
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: post office
+          m_FavoriteSampleOutputDataGuid: 
+          m_TrainingSteps: 1000
+        - m_Guid: b461c60a-d012-4339-aa6c-7df7fd83d944
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_Name: Pixel Art
+          m_Description: 2d pixel art clicker game
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9317d776-223d-414d-a474-77fe5c68461a
+            m_State: 5
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_ValidationImagesData:
+          - m_Guid: c9962c64-e70d-4ae4-93d7-0cf7de9df36a
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: c9962c64-e70d-4ae4-93d7-0cf7de9df36a
+              m_State: 2
+              m_Disposing: 0
+            m_Prompt: restaurant
+          - m_Guid: 84f6d5e8-4371-41f9-8900-f95938803232
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 84f6d5e8-4371-41f9-8900-f95938803232
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: hotel
+          - m_Guid: dc5eed27-2df9-4abd-84a5-e094cef45e17
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: dc5eed27-2df9-4abd-84a5-e094cef45e17
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: post office
+          m_FavoriteSampleOutputDataGuid: 
+          m_TrainingSteps: 1200
+        - m_Guid: a63bf4dc-1004-45c8-a8a1-97be2b6f5b3e
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_Name: Pixel Art
+          m_Description: 2d pixel art clicker game
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9317d776-223d-414d-a474-77fe5c68461a
+            m_State: 5
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_ValidationImagesData:
+          - m_Guid: ebb9db2f-1627-43b8-96de-27ffd6948e90
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: ebb9db2f-1627-43b8-96de-27ffd6948e90
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: restaurant
+          - m_Guid: b02f6f5f-4e45-433a-8241-8c90f67b8b81
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: b02f6f5f-4e45-433a-8241-8c90f67b8b81
+              m_State: 2
+              m_Disposing: 0
+            m_Prompt: hotel
+          - m_Guid: 51bdff1e-9e9a-44e6-a101-6437709ce329
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 51bdff1e-9e9a-44e6-a101-6437709ce329
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: post office
+          m_FavoriteSampleOutputDataGuid: 
+          m_TrainingSteps: 1400
+        - m_Guid: 71d13e81-dfd9-4e43-8e83-e1722b8845dc
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_Name: Pixel Art
+          m_Description: 2d pixel art clicker game
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9317d776-223d-414d-a474-77fe5c68461a
+            m_State: 5
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_ValidationImagesData:
+          - m_Guid: 53b7cc52-4a59-4e49-99e1-028a62555e67
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 53b7cc52-4a59-4e49-99e1-028a62555e67
+              m_State: 2
+              m_Disposing: 0
+            m_Prompt: restaurant
+          - m_Guid: 7f69b338-cc07-4783-831f-04ea479a3be5
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 7f69b338-cc07-4783-831f-04ea479a3be5
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: hotel
+          - m_Guid: 1f7c34a2-bfcf-4ab6-8ee6-a124280e4b87
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 1f7c34a2-bfcf-4ab6-8ee6-a124280e4b87
+              m_State: 2
+              m_Disposing: 0
+            m_Prompt: post office
+          m_FavoriteSampleOutputDataGuid: 
+          m_TrainingSteps: 1600
+        - m_Guid: 5667b406-a093-4ffa-a564-a07c95b47680
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_Name: Pixel Art
+          m_Description: 2d pixel art clicker game
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9317d776-223d-414d-a474-77fe5c68461a
+            m_State: 5
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_ValidationImagesData:
+          - m_Guid: 8b2b166c-63be-4060-8a9d-76e9d0982885
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 8b2b166c-63be-4060-8a9d-76e9d0982885
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: restaurant
+          - m_Guid: 6041b6b2-88d8-4bdd-84cf-6cc0b2603933
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 6041b6b2-88d8-4bdd-84cf-6cc0b2603933
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: hotel
+          - m_Guid: 943007a3-c9ca-4f20-b28f-8075c90fa9b4
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 943007a3-c9ca-4f20-b28f-8075c90fa9b4
+              m_State: 2
+              m_Disposing: 0
+            m_Prompt: post office
+          m_FavoriteSampleOutputDataGuid: 
+          m_TrainingSteps: 1800
+        - m_Guid: e9272784-b697-48cd-8cff-c1b4fd864ff9
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_Name: Pixel Art
+          m_Description: 2d pixel art clicker game
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9317d776-223d-414d-a474-77fe5c68461a
+            m_State: 5
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+          m_ValidationImagesData:
+          - m_Guid: 04530883-b714-4dbc-a1e7-bf3923431356
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 04530883-b714-4dbc-a1e7-bf3923431356
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: restaurant
+          - m_Guid: b707b2be-b6c8-45a0-ae12-13cc20352a78
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: b707b2be-b6c8-45a0-ae12-13cc20352a78
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: hotel
+          - m_Guid: e23c71af-430d-41a8-8bc5-7ee1ce34ac1c
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: e23c71af-430d-41a8-8bc5-7ee1ce34ac1c
+              m_State: 1
+              m_Disposing: 0
+            m_Prompt: post office
+          m_FavoriteSampleOutputDataGuid: 04530883-b714-4dbc-a1e7-bf3923431356
+          m_TrainingSteps: 2000
+        m_SampleOutputPrompts:
+        - restaurant
+        - hotel
+        - post office
+        m_TrainingSetData:
+        - m_Guid: 9317d776-223d-414d-a474-77fe5c68461a
+          m_State: 1
+          m_Disposing: 0
+          m_TrainingSet:
+          - m_Guid: 24546cbf-4882-4fc1-855d-c83055512635
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343197
+          - m_Guid: 6a5099e2-f838-4665-8657-dce7b77a0dd9
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343198
+          - m_Guid: 2d0e54d0-f319-425a-8d5c-904843edfab2
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343199
+          - m_Guid: dcc10da1-db9a-4ae8-84a8-c04e38181dea
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343200
+          - m_Guid: 588730cc-db55-4d6b-a790-3b5bd61dd60f
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343201
+          - m_Guid: cf6ca927-d4b2-4652-bfb9-480ffd41e555
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343202
+          - m_Guid: 713b4183-8c07-4de7-9cce-5b0f9c45afac
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343203
+          - m_Guid: f687dc04-ff7a-4735-acf3-20c6af80a97a
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343204
+          - m_Guid: 34eaa181-1276-48a9-a5bd-b80d2d757819
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343205
+          - m_Guid: 8e381482-941b-4960-b10d-8794d78b968c
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343206
+          - m_Guid: 0e306bb4-25c5-48bc-a378-4f0331e0107a
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343207
+          - m_Guid: aa1d4779-e56a-46fc-9add-90b2b7b29f93
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343208
+          - m_Guid: bd886f1f-6784-4e87-a40a-637c8647fc5d
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343209
+          - m_Guid: d84635f0-225b-45b9-97a7-642f74518f91
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343210
+          - m_Guid: 5294c476-322a-4bee-a6a7-13dc1800329b
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              rid: 1544718527035343211
+          m_ProjectID: d04f57f8-4eef-4c5d-8789-ace65d003936
+        m_Name: Pixel Art
+        m_Description: 2d pixel art clicker game
+    - rid: 1544718527035343180
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 00000000-0000-0000-0000-000000000000
+        m_State: 3
+        m_Disposing: 1
+    - rid: 1544718527035343181
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 5cc104e0-423a-473e-8034-b9d346cb2357
+        m_State: 1
+        m_Disposing: 0
+        m_IsFallback: 0
+        m_Thumbnail:
+          rid: -2
+        m_Visible: 1
+        selectedCheckPointGUID: 00000000-0000-0000-0000-000000000000
+        m_FavoriteCheckPointGUID: active
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: 11000000-0000-0000-0000-000000000011
+        m_TrainingSteps: 2000
+        m_CheckPoints:
+        - m_Guid: 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: 11000000-0000-0000-0000-000000000011
+          m_Name: 'Happy Harvest [Orion V4 2000]'
+          m_Description: 8 Nov 2023
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 3e758588-960f-44f5-865a-d5eaa1b1dec4
+            m_State: 5
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: 11000000-0000-0000-0000-000000000011
+          m_ValidationImagesData:
+          - m_Guid: 96b39a19-2d3e-4bc5-aa3c-38667ed6eba5
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 96b39a19-2d3e-4bc5-aa3c-38667ed6eba5
+              m_State: 5
+              m_Disposing: 0
+            m_Prompt: A chicken
+          - m_Guid: 05de072c-ebbc-43d7-886b-7ac4f9cbd079
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 05de072c-ebbc-43d7-886b-7ac4f9cbd079
+              m_State: 5
+              m_Disposing: 0
+            m_Prompt: A cow
+          - m_Guid: 2dbfc212-f87b-45f9-a05a-06368e190ca1
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 2dbfc212-f87b-45f9-a05a-06368e190ca1
+              m_State: 5
+              m_Disposing: 0
+            m_Prompt: A dog
+          - m_Guid: e0139464-a868-402a-95b8-b4c26685a97b
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: e0139464-a868-402a-95b8-b4c26685a97b
+              m_State: 5
+              m_Disposing: 0
+            m_Prompt: A farmer
+          - m_Guid: 4421bead-a3ff-4c09-9514-61e127eb470e
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 4421bead-a3ff-4c09-9514-61e127eb470e
+              m_State: 5
+              m_Disposing: 0
+            m_Prompt: A pine tree
+          m_FavoriteSampleOutputDataGuid: 
+          m_TrainingSteps: 1200
+        m_SampleOutputPrompts:
+        - A chicken
+        - A cow
+        - A dog
+        - A farmer
+        - A pine tree
+        m_TrainingSetData:
+        - m_Guid: 3e758588-960f-44f5-865a-d5eaa1b1dec4
+          m_State: 5
+          m_Disposing: 0
+          m_TrainingSet: []
+          m_ProjectID: 11000000-0000-0000-0000-000000000011
+        m_Name: Default
+        m_Description: Default Style
+    - rid: 1544718527035343197
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 24546cbf-4882-4fc1-855d-c83055512635
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343198
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 6a5099e2-f838-4665-8657-dce7b77a0dd9
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343199
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 2d0e54d0-f319-425a-8d5c-904843edfab2
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343200
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: dcc10da1-db9a-4ae8-84a8-c04e38181dea
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343201
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 588730cc-db55-4d6b-a790-3b5bd61dd60f
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343202
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: cf6ca927-d4b2-4652-bfb9-480ffd41e555
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343203
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 713b4183-8c07-4de7-9cce-5b0f9c45afac
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343204
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: f687dc04-ff7a-4735-acf3-20c6af80a97a
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343205
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 34eaa181-1276-48a9-a5bd-b80d2d757819
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343206
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 8e381482-941b-4960-b10d-8794d78b968c
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343207
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 0e306bb4-25c5-48bc-a378-4f0331e0107a
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343208
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: aa1d4779-e56a-46fc-9add-90b2b7b29f93
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343209
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: bd886f1f-6784-4e87-a40a-637c8647fc5d
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343210
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: d84635f0-225b-45b9-97a7-642f74518f91
+        m_State: 1
+        m_Disposing: 1
+    - rid: 1544718527035343211
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 5294c476-322a-4bee-a6a7-13dc1800329b
+        m_State: 1
+        m_Disposing: 1

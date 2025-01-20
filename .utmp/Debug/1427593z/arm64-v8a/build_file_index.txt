@@ -1,0 +1,3 @@
+C:\Projects\2D Mobile Test Game 1\Library\PramData\AndroidApplicationController\Cache\com.DefaultCompany.com.unity.template.mobile2D\gradle-project\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Projects\2D Mobile Test Game 1\Library\PramData\AndroidApplicationController\Cache\com.DefaultCompany.com.unity.template.mobile2D\gradle-project\unityLibrary\src\main\cpp\FramePacing\CMakeLists.txt
+C:\Projects\2D Mobile Test Game 1\Library\PramData\AndroidApplicationController\Cache\com.DefaultCompany.com.unity.template.mobile2D\gradle-project\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

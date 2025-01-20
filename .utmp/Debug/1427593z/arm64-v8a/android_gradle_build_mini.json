@@ -1,0 +1,35 @@
+{
+  "buildFiles": [
+    "C:\\Projects\\2D Mobile Test Game 1\\Library\\PramData\\AndroidApplicationController\\Cache\\com.DefaultCompany.com.unity.template.mobile2D\\gradle-project\\unityLibrary\\src\\main\\cpp\\CMakeLists.txt",
+    "C:\\Projects\\2D Mobile Test Game 1\\Library\\PramData\\AndroidApplicationController\\Cache\\com.DefaultCompany.com.unity.template.mobile2D\\gradle-project\\unityLibrary\\src\\main\\cpp\\FramePacing\\CMakeLists.txt",
+    "C:\\Projects\\2D Mobile Test Game 1\\Library\\PramData\\AndroidApplicationController\\Cache\\com.DefaultCompany.com.unity.template.mobile2D\\gradle-project\\unityLibrary\\src\\main\\cpp\\GameActivity\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.31f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Projects\\2D Mobile Test Game 1\\.utmp\\Debug\\1427593z\\arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.31f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Projects\\2D Mobile Test Game 1\\.utmp\\Debug\\1427593z\\arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "game::@d02bb112ea9f9c2ed29f": {
+      "artifactName": "game",
+      "abi": "arm64-v8a",
+      "output": "C:\\Projects\\2D Mobile Test Game 1\\Library\\PramData\\AndroidApplicationController\\Cache\\com.DefaultCompany.com.unity.template.mobile2D\\gradle-project\\unityLibrary\\build\\intermediates\\cxx\\Debug\\1427593z\\obj\\arm64-v8a\\libgame.so",
+      "runtimeFiles": []
+    },
+    "swappywrapper::@7e25bd1f32ce224db4e9": {
+      "artifactName": "swappywrapper",
+      "abi": "arm64-v8a",
+      "output": "C:\\Projects\\2D Mobile Test Game 1\\Library\\PramData\\AndroidApplicationController\\Cache\\com.DefaultCompany.com.unity.template.mobile2D\\gradle-project\\unityLibrary\\build\\intermediates\\cxx\\Debug\\1427593z\\obj\\arm64-v8a\\libswappywrapper.so",
+      "runtimeFiles": []
+    }
+  }
+}

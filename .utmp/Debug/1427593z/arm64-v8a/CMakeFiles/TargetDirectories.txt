@@ -1,0 +1,8 @@
+C:/Projects/2D Mobile Test Game 1/.utmp/Debug/1427593z/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Projects/2D Mobile Test Game 1/.utmp/Debug/1427593z/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Projects/2D Mobile Test Game 1/.utmp/Debug/1427593z/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Projects/2D Mobile Test Game 1/.utmp/Debug/1427593z/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Projects/2D Mobile Test Game 1/.utmp/Debug/1427593z/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+C:/Projects/2D Mobile Test Game 1/.utmp/Debug/1427593z/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Projects/2D Mobile Test Game 1/.utmp/Debug/1427593z/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Projects/2D Mobile Test Game 1/.utmp/Debug/1427593z/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
