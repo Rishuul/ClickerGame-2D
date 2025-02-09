@@ -10,13 +10,15 @@ public class ClickButton : MonoBehaviour
 
     public GameInputs inputActions;
 
+    public int clicks;
+
     public CoinManager coinManager;
 
     private Vector2 clickPosition;
 
     public AudioManager audioManager;
 
-    public GameObject moneyParticleSystem;
+    //public GameObject moneyParticleSystem;
 
     public bool clickPerformed = false;
     void Start()
@@ -26,6 +28,7 @@ public class ClickButton : MonoBehaviour
         clickButtonAnimator = GetComponent<Animator>();
         inputActions.Taps.Enable();
         inputActions.Taps.ButtonClick.performed+=OnButtonClicked;
+        clicks=0;
     }
 
     void OnDisable()
@@ -36,7 +39,7 @@ public class ClickButton : MonoBehaviour
     
     void Update()
     {
-        
+        Application.runInBackground=true;
     }
 
     public void OnButtonClicked(InputAction.CallbackContext context)
@@ -51,16 +54,17 @@ public class ClickButton : MonoBehaviour
                 clickPerformed=true;
                 Debug.Log("Clicked button!");
                 coinManager.coins+=coinManager.coinsPerClick;
+                clicks++;
                 clickButtonAnimator.SetTrigger("Clicked");
                 audioManager.Play("clickSound1");
-                GameObject particles = Instantiate(moneyParticleSystem,new Vector3(0,-2.95f,0),Quaternion.identity);
-                ParticleSystem particleSystem = particles.GetComponent<ParticleSystem>();
-                if(particleSystem!=null)
-                {
-                    particleSystem.Play();
-                    Debug.Log("Particle system instantiated!");
-                }
-                Destroy(particles,0.48f);
+                // GameObject particles = Instantiate(moneyParticleSystem,new Vector3(0,-2.95f,0),Quaternion.identity);
+                // ParticleSystem particleSystem = particles.GetComponent<ParticleSystem>();
+                // if(particleSystem!=null)
+                // {
+                //     particleSystem.Play();
+                //     Debug.Log("Particle system instantiated!");
+                // }
+                // Destroy(particles,0.48f);
             }
             else
             {

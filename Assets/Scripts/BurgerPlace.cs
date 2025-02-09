@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,18 +19,24 @@ public class BurgerPlace : MonoBehaviour
     public bool isBurgerPlaceReadyToCollect;
 
     public int burgerPlaceLevel;
+    public int burgerPlaceLevelsToNextPhase;
     
     public int burgerPlacePhase;
-    public int burgerCollectTime = 15;
+    public float burgerCollectTime = 15f;
+
+    public UnityEngine.UI.Image timeLeftSlider;
 
     public float burgerTimer;
     void Start()
     {
         burgerPlaceEarnings = 200;
         burgerPlaceLevel=1;
+        burgerPlacePhase=1;
+        burgerPlaceLevelsToNextPhase=10;
         isBurgerPlaceReadyToCollect=false;
         burgerPlaceButton = GetComponent<Button>();
         burgerPlaceButton.interactable=false;
+        timeLeftSlider.fillAmount=0f;
         
     }
 
@@ -40,9 +47,10 @@ public class BurgerPlace : MonoBehaviour
         {
             if(isBurgerPlaceReadyToCollect)
             {
-                burgerCollectCooldownTimeText.text=  "Ready to collect!";
+                burgerCollectCooldownTimeText.text=  "Ready!";
                 burgerPlaceButton.interactable=true;
                 burgerPlaceCollectIconUI.SetActive(true);
+                timeLeftSlider.fillAmount=1f;
             }
             else
             {
@@ -52,18 +60,20 @@ public class BurgerPlace : MonoBehaviour
                     burgerCollectCooldownTimeText.text=  "Ready to collect!";
                     isBurgerPlaceReadyToCollect=true;
                     burgerPlaceCollectIconUI.SetActive(true);
+                    timeLeftSlider.fillAmount=1f;
                     
                 }
                 else
                 {
-                    burgerCollectCooldownTimeText.text = "Collect in: "+Mathf.CeilToInt(timeRemaining);
+                    burgerCollectCooldownTimeText.text = Mathf.CeilToInt(timeRemaining).ToString();
+                    timeLeftSlider.fillAmount=1-(timeRemaining/burgerCollectTime);
                 }
                 
             }
         }
         
     }
-
+    public event Action OnCoinsChanged;
     public void CollectBurgerMoney()
     {
         coinManager.coins+= burgerPlaceEarnings;
@@ -71,5 +81,6 @@ public class BurgerPlace : MonoBehaviour
         burgerTimer=Time.time;
         burgerPlaceCollectIconUI.SetActive(false);
         burgerPlaceButton.interactable=false;
+        OnCoinsChanged?.Invoke();
     }
 }

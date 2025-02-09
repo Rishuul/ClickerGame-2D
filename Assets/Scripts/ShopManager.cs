@@ -1,138 +1,181 @@
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
-    public bool isShopOpen = false;
-
+    [Header("References")]
     public ClickButton clickButton;
-
+    public UpgradeManager upgradeManager;
     public BurgerPlace burgerPlace;
-
+    public MovieTheatre movieTheatre;
     public CoinManager coinManager;
     public GameObject shopMenu;
-
-    public bool boughtBurgerPlace;
-
-    public Button buyButton1,buyButton2;
+    public GameObject shopBar;
+    public GameObject managerBar;
+    
+    [Header("UI Elements")]
+    public Button buyButton1, buyButton2,buyButton3;
     public Color greyedColor;
-
-    private Color originalColour;
-
-    public int costOfMoreClicksPerSecond;
-
-    public int costofBurgerPlace;
-
-    public TextMeshProUGUI costofMoreClicksPerSecondText;
-
-    public TextMeshProUGUI costofBurgerPlaceText;
-
+    public TextMeshProUGUI currentClickUpgradeCostText;
+    public TextMeshProUGUI burgerPlaceCostText;
     public TextMeshProUGUI currentClicksPerSecondText;
+    public TextMeshProUGUI movieTheatreCostText;
+
+    [Header("Shop Settings")]
+    public int baseClickUpgradeCost = 50;
+    public int costIncrement = 30;
+    public int burgerPlaceCost = 10;
+    public int movieTheatreCost = 20;
+    public int currentMovieTheatreUpgradeCost =1000;
+    public int movieTheatreUpgradeIncrement = 100;
+    public float movieTheatreTimeReduction = 0.5f;
+    public Color originalColour;
+    public int currentClickUpgradeCost;
+    public bool boughtBurgerPlace;
+    public bool boughtMovieTheatre;
+    public bool isShopOpen;
+    public bool isShopBarOpen;
+    public bool isManagerBarOpen;
+
+    [Header("Manager Settings")]
+
+    public bool boughtBurgerPlaceManager;
+
+    public int burgerPlaceManagerCost = 10000;
+
     void Start()
     {
-        boughtBurgerPlace=false;
+        InitializeShop();
+        coinManager.OnCoinsChanged+=UpdateButtonStates;
+        burgerPlace.OnCoinsChanged+=UpdateButtonStates;
+        movieTheatre.OnCoinsChanged+=UpdateButtonStates;
+        movieTheatreCostText.text = movieTheatreCost.ToString();
+    }
+
+    void InitializeShop()
+    {
+        currentClickUpgradeCost =baseClickUpgradeCost;
         originalColour = buyButton1.image.color;
-        costOfMoreClicksPerSecond = 50;
-        costofBurgerPlace = 1000;
-        costofMoreClicksPerSecondText.text = coinManager.FormatCoins(costOfMoreClicksPerSecond);
-        costofBurgerPlaceText.text = costofBurgerPlace.ToString();
-        currentClicksPerSecondText.text= "Current Money Per Click: " + coinManager.FormatCoins(coinManager.coinsPerClick);
-    }
+        isShopBarOpen=true;
+        isManagerBarOpen=false;
+        UpdateCostDisplays();
+        UpdateClicksPerSecondDisplay();
 
-    void Update()
-    {
-        if(isShopOpen)
-        {
-            if(coinManager.coins<costOfMoreClicksPerSecond)
-            {
-                buyButton1.image.color = greyedColor;
-            }
-            else if(coinManager.coins>=costOfMoreClicksPerSecond)
-            {
-                buyButton1.image.color = originalColour;
-            }
-            if(!boughtBurgerPlace)
-            {
-                if(coinManager.coins<costofBurgerPlace)
-                {
-                    buyButton2.image.color = greyedColor;
-                }
-                else if(coinManager.coins>=costofBurgerPlace)
-                {
-                    buyButton2.image.color = originalColour;
-                }
-            }
-            
-            
-        }
-    }
-
-    public void OpenShop()
-    {
-        isShopOpen=true;
-        clickButton.inputActions.Taps.Disable();
-        shopMenu.SetActive(true);
-    }
-
-    public void CloseShop()
-    {
-        isShopOpen=false;
-        clickButton.inputActions.Taps.Enable();
         shopMenu.SetActive(false);
     }
 
-    public void buyMoreClicksPerSecond()
+    public void ToggleShop(bool state)
     {
-        if(coinManager.coins<costOfMoreClicksPerSecond)
+        isShopOpen=state;
+        shopMenu.SetActive(state);
+        if(state)
         {
-            Debug.Log("Not enough coins!");
+            clickButton.inputActions.Taps.Disable();
         }
         else
         {
-            coinManager.coins-=costOfMoreClicksPerSecond;
-            coinManager.coinsPerClick++;
-            costOfMoreClicksPerSecond+=30;
-            costofMoreClicksPerSecondText.text = coinManager.FormatCoins(costOfMoreClicksPerSecond);
-            currentClicksPerSecondText.text = "Current Money Per Click: " + coinManager.FormatCoins(coinManager.coinsPerClick);
-            // GameObject particles = Instantiate(clickButton.moneyParticleSystem,Camera.main.WorldToScreenPoint(buyButton1.transform.position),Quaternion.identity);
-            // ParticleSystem particleSystem = particles.GetComponent<ParticleSystem>();
-            // if(particleSystem!=null)
-            // {
-            //     particleSystem.Play();
-            //     Debug.Log("Particle system instantiated!");
-            // }
-            // Destroy(particles,1f);
+            clickButton.inputActions.Taps.Enable();
         }
+
+        if(state) UpdateButtonStates();
+    }
+    
+    public void OpenManagerBar()
+    {
+        if(!isManagerBarOpen)
+        {
+            managerBar.SetActive(true);
+            isManagerBarOpen=true;
+            shopBar.SetActive(false);
+            isShopBarOpen=false;
+        }
+    }
+    public void OpenShopBar()
+    {
+        if(!isShopBarOpen)
+        {
+            shopBar.SetActive(true);
+            isShopBarOpen=true;
+            managerBar.SetActive(false);
+            isManagerBarOpen=false;
+        }
+    }
+    void UpdateButtonStates()
+    {
+        UpdateButtonState(buyButton1,currentClickUpgradeCost);
+
+        if(!boughtBurgerPlace)
+        {
+            UpdateButtonState(buyButton2,burgerPlaceCost);
+        }
+        if(!boughtMovieTheatre)
+        {
+            UpdateButtonState(buyButton3,movieTheatreCost);
+        }
+    }
+    void UpdateButtonState(Button button,int cost)
+    {
+        button.image.color =coinManager.coins>=cost ? originalColour: greyedColor;
+        button.interactable = coinManager.coins>=cost;
+    }
+
+    public void BuyMoreClicksPerSecond()
+    {
+        if(!coinManager.SpendCoins(currentClickUpgradeCost)) return;
+
+        coinManager.coinsPerClick++;
+        currentClickUpgradeCost+=costIncrement;
+
+        UpdateCostDisplays();
+        UpdateClicksPerSecondDisplay();
+    }
+
+    public void BuyBurgerPlace()
+    {
+        if(!coinManager.SpendCoins(burgerPlaceCost)) return;
+
+        boughtBurgerPlace=true;
+        buyButton2.interactable=false;
+        buyButton2.image.color = greyedColor;
+        burgerPlaceCostText.text = "Owned";
+
+        burgerPlace.burgerPlaceUI.SetActive(true);
+        burgerPlace.burgerTimer = Time.time;
+    }
+
+    void UpdateCostDisplays()
+    {
+        currentClickUpgradeCostText.text = coinManager.FormatCoins(currentClickUpgradeCost);
+        if(!boughtBurgerPlace) burgerPlaceCostText.text = coinManager.FormatCoins(burgerPlaceCost);
+        if(!boughtMovieTheatre) movieTheatreCostText.text = coinManager.FormatCoins(movieTheatreCost);
         
     }
 
-    public void buyBurgerPlace()
+    void UpdateClicksPerSecondDisplay()
     {
-        if(coinManager.coins<costofBurgerPlace)
-        {
-            Debug.Log("Not enough coins!");
-        }
-        else
-        {
-            boughtBurgerPlace=true;
-            coinManager.coins-=costofBurgerPlace;
-            costofBurgerPlaceText.text = "Owned";
-            buyButton2.image.color = greyedColor;
-            buyButton2.interactable = false;
-            burgerPlace.burgerPlaceUI.SetActive(true);
-            burgerPlace.burgerTimer = Time.time;
-            // GameObject particles = Instantiate(clickButton.moneyParticleSystem,Camera.main.WorldToScreenPoint(buyButton2.transform.position),Quaternion.identity);
-            // ParticleSystem particleSystem = particles.GetComponent<ParticleSystem>();
-            // if(particleSystem!=null)
-            // {
-            //     particleSystem.Play();
-            //     Debug.Log("Particle system instantiated!");
-            // }
-            // Destroy(particles,1f);
-        }
+        currentClicksPerSecondText.text = $"Current Money Per Click: {coinManager.FormatCoins(coinManager.coinsPerClick)}";
     }
 
-    
+    private void OnDestroy()
+    {
+        if (coinManager != null)
+        {
+            coinManager.OnCoinsChanged -= UpdateButtonStates;
+        }
+    }
+    public void BuyMovieTheatre()
+    {
+        if(!coinManager.SpendCoins(movieTheatreCost)) return;
+
+        boughtMovieTheatre=true;
+        buyButton3.interactable=false;
+        buyButton3.image.color = greyedColor;
+        movieTheatreCostText.text = "Owned";
+
+        movieTheatre.movieTheatreUI.SetActive(true);
+        movieTheatre.movieTimer = Time.time;
+    }
 }

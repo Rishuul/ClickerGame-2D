@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -13,18 +14,22 @@ public class CoinManager : MonoBehaviour
     public TextMeshProUGUI coinsText;
 
     public TextMeshProUGUI coinsText1;
+    public TextMeshProUGUI coinsText2;
 
     public TextMeshProUGUI diamondsText;
 
     void Awake()
     {
-        Application.targetFrameRate=60;
+        Application.targetFrameRate=144;
     }
     void Update()
     {
         
         coinsText.text = FormatCoins(coins);
         coinsText1.text = FormatCoins(coins);
+        coinsText2.text = FormatCoins(coins);
+
+        diamondsText.text = FormatCoins(diamonds);
 
         
         
@@ -41,4 +46,17 @@ public class CoinManager : MonoBehaviour
 
         return amount.ToString(); // Less than 1000
     }
+
+    public event Action OnCoinsChanged;
+
+    public bool SpendCoins(int amount)
+    {
+        if(coins<amount) return false;
+
+        coins-=amount;
+        OnCoinsChanged?.Invoke();
+        return true;
+    }
+
+    
 }
